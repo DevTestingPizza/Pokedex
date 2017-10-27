@@ -32,7 +32,7 @@ class Pokemon {
     }
     
     init(name: String, pokedexId: Int) {
-        self._name = name
+        self._name = name.capitalized
         self._pokedexId = pokedexId
         self._pokemonURL = "\(URL_BASE)\(URL_POKEMON)\(self.pokedexId)/"
         
@@ -41,7 +41,37 @@ class Pokemon {
     
     func downloadPokemonDetails(completed: DownloadComplete) {
         Alamofire.request(_pokemonURL).responseJSON { (response) in
-            print(response.result.value!)
+            if let dict = response.result.value as?  Dictionary<String, AnyObject> {
+                if let weight = dict["weight"] as? Int {
+                    self._weight = "\(weight)"
+                }
+                if let height = dict["height"] as? Int {
+                    self._height = "\(height)"
+                }
+                if let stats = dict["stats"] as? [Dictionary<String, AnyObject>] {
+                    if let defense = stats[3]["base_stat"] as? Int {
+                        self._defense = "\(defense)"
+                    }
+                    if let attack = stats[4]["base_stat"] as? Int {
+                        self._attack = "\(attack)"
+                    }
+                }
+                if let types = dict["types"] as? [Dictionary<String, AnyObject>] {
+                    for type in types {
+                        if let type2 = type["type"] as? Dictionary<String, AnyObject> {
+                            if let typeName = type2["name"] as? String {
+                                if self._type == "" || self._type == nil {
+                                    self._type = typeName.capitalized
+                                } else {
+                                    self._type = "\(self._type!)/\(typeName.capitalized)"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //print(response.result.value!)
+            print(self._name, self._pokedexId, self._description, self._type, self._defense, self._weight, self._height, self._attack, self._nextEvoTxt, self._pokemonURL )
         }
     }
     

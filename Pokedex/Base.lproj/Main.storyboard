@@ -160,15 +160,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jal-m0-wjV">
-                                <rect key="frame" x="166" y="323" width="42" height="20.5"/>
+                                <rect key="frame" x="123" y="301" width="129" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="rNL-O5-NQN"/>
+                                    <constraint firstAttribute="height" constant="64" id="yXw-uo-lwo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuh-5l-7Js">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="WId-DK-fsp">
+                                        <rect key="frame" x="46" y="25" width="282" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="OAd-fS-LJf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgV-rd-3FT">
+                                        <rect key="frame" x="336" y="25" width="31" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="C6z-Fs-mNb"/>
+                                            <constraint firstAttribute="width" constant="31" id="Raa-Ya-8JY"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Z0-R8-ZaO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skL-r7-VwO">
+                                        <rect key="frame" x="8" y="28" width="36" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="d2w-cl-a3J"/>
+                                            <constraint firstAttribute="width" constant="36" id="wlX-CB-I4N"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YgV-rd-3FT" secondAttribute="trailing" constant="8" id="5RF-br-Ugg"/>
+                                    <constraint firstItem="WId-DK-fsp" firstAttribute="centerX" secondItem="tuh-5l-7Js" secondAttribute="centerX" id="E8z-4g-gaO"/>
+                                    <constraint firstAttribute="bottom" secondItem="YgV-rd-3FT" secondAttribute="bottom" constant="9" id="Jgr-fZ-6HL"/>
+                                    <constraint firstItem="WId-DK-fsp" firstAttribute="top" secondItem="tuh-5l-7Js" secondAttribute="top" constant="25" id="OeZ-lp-oPC"/>
+                                    <constraint firstAttribute="bottom" secondItem="WId-DK-fsp" secondAttribute="bottom" id="gNT-YF-hkI"/>
+                                    <constraint firstAttribute="height" constant="65" id="kfk-E5-wPR"/>
+                                    <constraint firstAttribute="bottom" secondItem="skL-r7-VwO" secondAttribute="bottom" constant="13" id="uWI-Ro-bjO"/>
+                                    <constraint firstItem="skL-r7-VwO" firstAttribute="leading" secondItem="tuh-5l-7Js" secondAttribute="leading" constant="8" id="v2q-x5-cPS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="jal-m0-wjV" firstAttribute="centerY" secondItem="fbt-dU-5gM" secondAttribute="centerY" id="VjN-Yh-yXL"/>
+                            <constraint firstItem="tuh-5l-7Js" firstAttribute="leading" secondItem="sie-6p-Kwq" secondAttribute="leading" id="a6e-QJ-hz7"/>
                             <constraint firstItem="jal-m0-wjV" firstAttribute="centerX" secondItem="fbt-dU-5gM" secondAttribute="centerX" id="esQ-OY-l5e"/>
+                            <constraint firstItem="tuh-5l-7Js" firstAttribute="top" secondItem="fbt-dU-5gM" secondAttribute="top" id="fGu-Cw-p6g"/>
+                            <constraint firstItem="tuh-5l-7Js" firstAttribute="trailing" secondItem="sie-6p-Kwq" secondAttribute="trailing" id="vu3-ES-rFm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sie-6p-Kwq"/>
                     </view>
@@ -183,6 +234,7 @@
     </scenes>
     <resources>
         <image name="217" width="120" height="120"/>
+        <image name="back" width="100" height="67"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
     </resources>

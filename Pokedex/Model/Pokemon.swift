@@ -40,7 +40,9 @@ class Pokemon {
     }
     
     func downloadPokemonDetails(completed: DownloadComplete) {
-        //Alamofire.request
+        Alamofire.request(_pokemonURL).responseJSON { (response) in
+            print(response.result.value!)
+        }
     }
     
     

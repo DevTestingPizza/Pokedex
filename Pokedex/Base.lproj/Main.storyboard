@@ -400,8 +400,18 @@
                         <viewLayoutGuide key="safeArea" id="sie-6p-Kwq"/>
                     </view>
                     <connections>
+                        <outlet property="attackLabel" destination="psb-ZI-AXo" id="i5v-L3-jnX"/>
+                        <outlet property="currentEvoImage" destination="jDI-nr-07D" id="DXJ-jU-Auq"/>
+                        <outlet property="defenseLabel" destination="KzK-Y0-IVu" id="dby-Ku-UGo"/>
+                        <outlet property="descriptionLabel" destination="cKN-Kw-Fat" id="Rr0-KX-gdh"/>
+                        <outlet property="heightLabel" destination="oyz-xH-vfZ" id="0ht-zo-F19"/>
                         <outlet property="nameLabel" destination="WId-DK-fsp" id="RJ3-bd-hW3"/>
+                        <outlet property="nextEvoImage" destination="cm2-6A-bbB" id="Ihx-XX-5Oa"/>
+                        <outlet property="nextEvoLabel" destination="8rM-fa-bGR" id="Gxf-b3-S5t"/>
+                        <outlet property="pokedexIdLabel" destination="KiI-hx-hip" id="Em4-1X-G7b"/>
                         <outlet property="thumbImage" destination="Vz8-Q6-7Nv" id="sX5-TB-5xk"/>
+                        <outlet property="typeLabel" destination="Ezr-8n-OAX" id="vYh-0C-bhI"/>
+                        <outlet property="weightLabel" destination="SkE-Cz-dso" id="4XE-zc-tkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oN-f0-feh" userLabel="First Responder" sceneMemberID="firstResponder"/>

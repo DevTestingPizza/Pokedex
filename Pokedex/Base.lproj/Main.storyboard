@@ -217,7 +217,7 @@
                                 </segments>
                                 <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-Q6-7Nv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-Q6-7Nv">
                                 <rect key="frame" x="8" y="109" width="125" height="125"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -356,7 +356,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMU-zT-XOA">
-                                <rect key="frame" x="0.0" y="344.5" width="375" height="37"/>
+                                <rect key="frame" x="0.0" y="352.5" width="375" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Evolution: Venusaur LVL 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rM-fa-bGR">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
@@ -374,11 +374,26 @@
                                     <constraint firstItem="8rM-fa-bGR" firstAttribute="top" secondItem="TMU-zT-XOA" secondAttribute="top" id="xkw-fa-vFE"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EjC-xZ-zpD">
+                                <rect key="frame" x="0.0" y="397" width="375" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="jDI-nr-07D">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="120"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-6A-bbB">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="120"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="tf6-xO-SgA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cKN-Kw-Fat" firstAttribute="top" secondItem="Wx1-IT-h1Z" secondAttribute="bottom" constant="8" id="8I1-oe-cJR"/>
                             <constraint firstItem="R4d-at-W0X" firstAttribute="leading" secondItem="sie-6p-Kwq" secondAttribute="leading" constant="8" id="E8c-0I-Mhp"/>
+                            <constraint firstItem="sie-6p-Kwq" firstAttribute="trailing" secondItem="EjC-xZ-zpD" secondAttribute="trailing" id="LEo-1P-Ua6"/>
                             <constraint firstItem="TMU-zT-XOA" firstAttribute="leading" secondItem="sie-6p-Kwq" secondAttribute="leading" id="MiM-eA-o7H"/>
                             <constraint firstItem="cKN-Kw-Fat" firstAttribute="leading" secondItem="Vz8-Q6-7Nv" secondAttribute="trailing" constant="8" id="NyP-MU-ChA"/>
                             <constraint firstItem="TMU-zT-XOA" firstAttribute="trailing" secondItem="sie-6p-Kwq" secondAttribute="trailing" id="WJe-rA-TS3"/>
@@ -386,12 +401,14 @@
                             <constraint firstItem="tuh-5l-7Js" firstAttribute="leading" secondItem="sie-6p-Kwq" secondAttribute="leading" id="a6e-QJ-hz7"/>
                             <constraint firstItem="sie-6p-Kwq" firstAttribute="trailing" secondItem="Wx1-IT-h1Z" secondAttribute="trailing" constant="8" id="cxL-xd-hhz"/>
                             <constraint firstItem="Wx1-IT-h1Z" firstAttribute="leading" secondItem="sie-6p-Kwq" secondAttribute="leading" constant="8" id="dJf-Fo-6Id"/>
+                            <constraint firstItem="EjC-xZ-zpD" firstAttribute="leading" secondItem="sie-6p-Kwq" secondAttribute="leading" id="dJu-EW-Ufp"/>
                             <constraint firstItem="tuh-5l-7Js" firstAttribute="top" secondItem="fbt-dU-5gM" secondAttribute="top" id="fGu-Cw-p6g"/>
+                            <constraint firstItem="EjC-xZ-zpD" firstAttribute="top" secondItem="TMU-zT-XOA" secondAttribute="bottom" constant="8" id="gcE-Vk-prb"/>
                             <constraint firstItem="Wx1-IT-h1Z" firstAttribute="top" secondItem="tuh-5l-7Js" secondAttribute="bottom" constant="8" id="gjN-rZ-NNC"/>
                             <constraint firstItem="R4d-at-W0X" firstAttribute="top" secondItem="Vz8-Q6-7Nv" secondAttribute="bottom" constant="8" id="gjw-pn-Xkz"/>
                             <constraint firstItem="Vz8-Q6-7Nv" firstAttribute="leading" secondItem="sie-6p-Kwq" secondAttribute="leading" constant="8" id="hFb-ZJ-7I8"/>
                             <constraint firstItem="sie-6p-Kwq" firstAttribute="trailing" secondItem="R4d-at-W0X" secondAttribute="trailing" constant="8" id="hMI-es-zAL"/>
-                            <constraint firstItem="TMU-zT-XOA" firstAttribute="top" secondItem="R4d-at-W0X" secondAttribute="bottom" constant="8" id="keC-8o-7CB"/>
+                            <constraint firstItem="TMU-zT-XOA" firstAttribute="top" secondItem="R4d-at-W0X" secondAttribute="bottom" constant="16" id="keC-8o-7CB"/>
                             <constraint firstItem="tuh-5l-7Js" firstAttribute="trailing" secondItem="sie-6p-Kwq" secondAttribute="trailing" id="vu3-ES-rFm"/>
                             <constraint firstItem="Vz8-Q6-7Nv" firstAttribute="top" secondItem="Wx1-IT-h1Z" secondAttribute="bottom" constant="8" id="yDD-aV-7mk"/>
                         </constraints>
@@ -410,6 +427,7 @@
     <resources>
         <image name="2" width="120" height="120"/>
         <image name="217" width="120" height="120"/>
+        <image name="3" width="120" height="120"/>
         <image name="back" width="100" height="67"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>

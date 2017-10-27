@@ -196,7 +196,7 @@
                                     <constraint firstItem="skL-r7-VwO" firstAttribute="leading" secondItem="tuh-5l-7Js" secondAttribute="leading" constant="8" id="v2q-x5-cPS"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wx1-IT-h1Z">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wx1-IT-h1Z">
                                 <rect key="frame" x="8" y="73" width="359" height="29"/>
                                 <segments>
                                     <segment title="Bio"/>

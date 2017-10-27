@@ -158,13 +158,27 @@
                     <view key="view" contentMode="scaleToFill" id="fbt-dU-5gM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jal-m0-wjV">
+                                <rect key="frame" x="166" y="323" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jal-m0-wjV" firstAttribute="centerY" secondItem="fbt-dU-5gM" secondAttribute="centerY" id="VjN-Yh-yXL"/>
+                            <constraint firstItem="jal-m0-wjV" firstAttribute="centerX" secondItem="fbt-dU-5gM" secondAttribute="centerX" id="esQ-OY-l5e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sie-6p-Kwq"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="jal-m0-wjV" id="Nar-th-PLD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oN-f0-feh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="116"/>
+            <point key="canvasLocation" x="836" y="115.59220389805098"/>
         </scene>
     </scenes>
     <resources>

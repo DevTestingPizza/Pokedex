@@ -40,7 +40,7 @@ class Pokemon {
     }
     
     func downloadPokemonDetails(completed: DownloadComplete) {
-        
+        //Alamofire.request
     }
     
     

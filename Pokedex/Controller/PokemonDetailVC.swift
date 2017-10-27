@@ -13,13 +13,17 @@ class PokemonDetailVC: UIViewController {
     var pokemon: Pokemon!
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var thumbImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         nameLabel.text = pokemon.name.capitalized
-        
+        thumbImage.image = UIImage(named: "\(pokemon.pokedexId)")
     }
 
-
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

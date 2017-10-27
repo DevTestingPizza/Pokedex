@@ -13,6 +13,9 @@
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Medium</string>
         </array>
+        <array key="pokemonfont.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -25,9 +28,23 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dg-pk-hcG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="674-x9-FC6">
+                                        <rect key="frame" x="46" y="25" width="282" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Jf4-72-Sk2"/>
+                                            <constraint firstAttribute="width" constant="282" id="yUe-mf-Bn7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="D8V-mb-R0z"/>
+                                    <constraint firstItem="674-x9-FC6" firstAttribute="centerX" secondItem="6dg-pk-hcG" secondAttribute="centerX" id="Gpl-uo-vpL"/>
+                                    <constraint firstAttribute="bottom" secondItem="674-x9-FC6" secondAttribute="bottom" id="MkP-bv-z6E"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZS8-Me-Oi7">

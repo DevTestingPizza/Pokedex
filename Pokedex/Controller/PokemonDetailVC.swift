@@ -31,8 +31,17 @@ class PokemonDetailVC: UIViewController {
 
         nameLabel.text = pokemon.name.capitalized
         thumbImage.image = UIImage(named: "\(pokemon.pokedexId)")
+        
+        pokemon.downloadPokemonDetails {
+            // Whatever we put here will only be executed after the download is completed.
+            self.updateUI()
+        }
     }
-
+    
+    func updateUI() {
+        
+    }
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -33,6 +33,14 @@ class PokemonDetailVC: UIViewController {
         thumbImage.image = UIImage(named: "\(pokemon.pokedexId)")
         pokedexIdLabel.text = "\(pokemon.pokedexId)"
         currentEvoImage.image = UIImage(named: "\(pokemon.pokedexId)")
+        descriptionLabel.text = "Loading..."
+        typeLabel.text = "Loading..."
+        defenseLabel.text = "Loading..."
+        heightLabel.text = "Loading..."
+        weightLabel.text = "Loading..."
+        attackLabel.text = "Loading..."
+        nextEvoLabel.text = "Loading..."
+        
         pokemon.downloadPokemonDetails {
             // Whatever we put here will only be executed after the download is completed.
             self.updateUI()
@@ -40,7 +48,11 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
-        
+        self.typeLabel.text = pokemon.type
+        self.defenseLabel.text = pokemon.defense
+        self.heightLabel.text = pokemon.height
+        self.weightLabel.text = pokemon.weight
+        self.attackLabel.text = pokemon.attack
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {

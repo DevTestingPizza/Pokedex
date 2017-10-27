@@ -63,6 +63,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="217" translatesAutoresizingMaskIntoConstraints="NO" id="KsZ-Il-axk">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="yY3-lp-G8k"/>
                                                     </constraints>

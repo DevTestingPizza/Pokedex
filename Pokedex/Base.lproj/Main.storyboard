@@ -29,22 +29,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dg-pk-hcG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="674-x9-FC6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="674-x9-FC6">
                                         <rect key="frame" x="46" y="25" width="282" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Jf4-72-Sk2"/>
-                                            <constraint firstAttribute="width" constant="282" id="yUe-mf-Bn7"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="yUe-mf-Bn7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-10-USh">
+                                        <rect key="frame" x="336" y="25" width="31" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="KZP-Af-gAs"/>
+                                            <constraint firstAttribute="width" constant="31" id="yR0-EI-0Lu"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0xA-Vs-nWQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dt2-10-USh" secondAttribute="trailing" constant="8" id="Axi-6T-l4f"/>
                                     <constraint firstAttribute="height" constant="65" id="D8V-mb-R0z"/>
                                     <constraint firstItem="674-x9-FC6" firstAttribute="centerX" secondItem="6dg-pk-hcG" secondAttribute="centerX" id="Gpl-uo-vpL"/>
                                     <constraint firstAttribute="bottom" secondItem="674-x9-FC6" secondAttribute="bottom" id="MkP-bv-z6E"/>
+                                    <constraint firstAttribute="bottom" secondItem="dt2-10-USh" secondAttribute="bottom" constant="9" id="xl8-kY-ZMO"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZS8-Me-Oi7">
@@ -140,5 +153,6 @@
     <resources>
         <image name="217" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
